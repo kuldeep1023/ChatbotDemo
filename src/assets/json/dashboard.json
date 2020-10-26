@@ -1,0 +1,34 @@
+{
+    "DashBoard": [
+        {
+            "id": 1,
+            "menuName": "Home 1",
+            "image": "./assets/images/step-functions.png"
+        },
+        {
+            "id": 2,
+            "menuName": "Home 2",
+            "image": "./assets/images/step-functions.png"
+        },
+        {
+            "id": 3,
+            "menuName": "Home 3",
+            "image": "./assets/images/step-functions.png"
+        },
+        {
+            "id": 4,
+            "menuName": "Home 4",
+            "image": "./assets/images/step-functions.png"
+        },
+        {
+            "id": 5,
+            "menuName": "Home 5",
+            "image": "./assets/images/step-functions.png"
+        },
+        {
+            "id": 6,
+            "menuName": "Home 6",
+            "image": "./assets/images/step-functions.png"
+        }
+    ]
+}

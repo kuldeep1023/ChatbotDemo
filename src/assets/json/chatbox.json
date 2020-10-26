@@ -1,0 +1,83 @@
+{
+    "ChatBox": [ {
+        "alternativeIntents": null,
+        "botVersion": "$LATEST",
+        "dialogState": "ElicitIntent",
+        "intentName": null,
+        "message": "You can ask me for help. Just type 'Help' or click on the mic and say it.",
+        "messageFormat": "PlainText",
+        "nluIntentConfidence": null,
+        "responseCard": null,
+        "sentimentResponse": null,
+        "sessionAttributes": {
+            "userAgent": "Chrome/85.0.4183.121",
+            "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF"
+        },
+        "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF",
+        "slotToElicit": null,
+        "slots": null
+    } ],
+    "ChatBox_1": {
+        "alternativeIntents": null,
+        "botVersion": "$LATEST",
+        "dialogState": "ElicitIntent",
+        "intentName": null,
+        "message": "Sorry, can you please repeat that?",
+        "messageFormat": "PlainText",
+        "nluIntentConfidence": null,
+        "responseCard": null,
+        "sentimentResponse": null,
+        "sessionAttributes": {
+            "userAgent": "Chrome/85.0.4183.121",
+            "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF"
+        },
+        "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF",
+        "slotToElicit": null,
+        "slots": null
+    },
+    "ChatBox_2":
+        {
+            "alternativeIntents": null,
+            "botVersion": "$LATEST",
+            "dialogState": "ElicitIntent",
+            "intentName": null,
+            "message": "Welcome to SFNBot !!! I will walk you through some of the things that I can do for you. Let us have a good experience.",
+            "messageFormat": "PlainText",
+            "nluIntentConfidence": null,
+            "responseCard": {
+                "contentType": "application/vnd.amazonaws.card.generic",
+                "genericAttachments": [
+                    {
+                        "attachmentLinkUrl": null,
+                        "buttons": [
+                            {
+                                "text": "List EMR Clusters",
+                                "value": "Can you please share the list of emr clusters"
+                            },
+                            {
+                                "text": "Describe Cluster",
+                                "value": "Give details of emr cluster"
+                            },
+                            {
+                                "text": "Terminate Cluster",
+                                "value": "I want to terminate job flows"
+                            }
+                        ],
+                        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTjf4fDEkKcrdEGRhYJegkWgYUgz9NRlE6Eg&usqp=CAU",
+                        "subTitle": "Try it by yourself !!! Please select one of the following:",
+                        "title": "Following are the few operations that you can perform on your Step Functions"
+                    }
+                ],
+                "version": "1",
+                "sentimentResponse": null
+            },
+            "sentimentResponse": null,
+            "sessionAttributes": {
+                "userAgent": "Chrome/85.0.4183.121",
+                "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF"
+            },
+            "sessionId": "2020-10-05T14:44:38.788Z-OtkkbWRF",
+            "slotToElicit": null,
+            "slots": null
+        }
+}

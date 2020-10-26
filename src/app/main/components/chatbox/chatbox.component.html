@@ -1,0 +1,77 @@
+<html>
+
+<div class="model model-size">
+
+    <div class="model-header row">
+        <div class="col-2">
+            <button class="btn-style" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bars font-awesome-color font-awesome-size"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Login</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <h1 class="popup-title">{{selectionInfo}}</h1>
+        </div>
+        <div class="col-2">
+            <button (click)="onHelp('Help')" class="btn-style">
+                <i class="fa fa-question-circle-o font-awesome-color font-awesome-size"></i>
+            </button>
+            <button (click)="onCloseChatBox()" class="float-right btn-style">
+                <i class="fa fa-times font-awesome-color font-awesome-size"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="model-body">
+        <div class="col-12 float-left" style="height: 20px;"></div>
+
+        <div *ngFor="let msgObj of tempMsgList; let i = index">
+            <div [id]="'SendMsg_' + i"  *ngIf="msgObj.msgType != undefined" class="col-12 right-align send-msg">
+                <div class="col-10 msg-div send-message">
+                    <p style="margin: 0px;">{{msgObj.msg}}</p>
+                </div>
+            </div>
+
+            <div [id]="'RecvMsg_' + i" *ngIf="msgObj.msgType == undefined" class="col-12 left-align recv-msg">
+                <div class="col-10 msg-div recive-msg">{{msgObj.message}}</div>
+            </div>
+            
+            <div [id]="'SystemMsg_' + i" *ngIf="msgObj.responseCard != null" class="col-12 float-left">
+                <!-- {{msgObj.responseCard.genericAttachments[0].title}} -->
+                <div *ngFor="let sysMsg of msgObj.responseCard.genericAttachments">
+                    <p class="system-msg">{{sysMsg.title}}</p>
+                    <p class="text-center">{{sysMsg.subTitle}}</p>
+                    <div class="col-12 text-center" style="padding: 0  0 15px 0;">
+                        <img src="{{sysMsg.imageUrl}}" style="width: 120px; height: 120px;" />
+                    </div>
+                    <div class="col-12">
+                        <div class="col-4 pull-left text-center" *ngFor="let btnVal of sysMsg.buttons">
+                            <button type="button" class="btn btn-primary btn-sys">{{btnVal.text}}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div id="kd" [innerHTML]="MsgList"></div> -->
+
+    </div>
+
+
+    <div class="model-footer row">
+        <div class="col-11">
+            <input (keyup)="onkeyUp(sendMessage)" (keyup.enter)="onSendMsg(sendMessage)" [(ngModel)]="sendMessage"
+                placeholder="Type here or click on the mic" type="text" id="inputText" class="input-box">
+        </div>
+        <div class="col-1" style="padding:10px 15px;" (click)="onSendMsg(sendMessage)">
+            <i *ngIf="!isBtn" class="fa fa-microphone font-awesome-size"></i>
+            <i *ngIf="isBtn" class="fa fa-paper-plane font-awesome-size"></i>
+        </div>
+    </div>
+
+</div>
+
+</html>

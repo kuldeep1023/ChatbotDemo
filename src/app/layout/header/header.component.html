@@ -1,0 +1,19 @@
+<div id="header" class="navbar-light bg-light">
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <a href="#" [routerLink]="['dashboard']">Microsoft Azure</a>
+    <a href="#">AWS</a>
+    <a href="#">Google cloud</a>
+    <a href="#">IBM</a>
+    <a href="#">Oracle</a>
+  </div>
+  <span style="font-size: 30px; cursor: pointer" (click)="openNav()"
+    >&#9776; open</span
+  >
+
+  <div class="pull-right" style="padding: 5px;">
+      <a (click)="logout()" class="btn btn-info btn-md">
+        <i class="fa fa-sign-out" aria-hidden="true"></i> Log out
+      </a> 
+  </div>
+</div>
